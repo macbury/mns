@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: <%= Settings.database.username %>
+  password: <%= Settings.database.password %>
+  host: <%= Settings.database.host %>
+  port: <%= Settings.database.port %>
+  pool: <%= Settings.database.pool %>
+development:
+  <<: *default
+  database: mns_development
+test:
+  <<: *default
+  database: mns_test
+production:
+  <<: *default
+database: mns_production

@@ -1,0 +1,6 @@
+- unless flash.empty?
+  .container
+    .row
+      .col-md-12
+        - flash.each do |type, message|
+          .alert.alert-info= message

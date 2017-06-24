@@ -1,0 +1,7 @@
+{
+  "keySize": 32,
+  "ivSize": 16,
+  "cipherName": "AES-CBC",
+  "publicKeyFormat": "pkcs1-public-pem",
+  "privateKeyFormat": "pkcs1-private-pem"
+}

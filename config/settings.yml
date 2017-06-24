@@ -1,0 +1,17 @@
+database:
+  host: ''
+  port:
+  password: ''
+  username: ''
+  pool: 25
+
+database_encryption_key: ''
+secret_key_base: ''
+
+google:
+  client_id: ''
+  client_secret: ''
+  allowed_domain: null
+
+page:
+  title: 'MNS Vault'

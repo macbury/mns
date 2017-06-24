@@ -1,0 +1,28 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  margin-top: 60px;
+}
+
+.alert, .navbar-brand {
+  .spinner, .glyphicon {
+    margin-right: 10px;
+  }
+}
+
+$nav_color_foreground: #222;
+$nav_color_background: #3f3f03;
+.navbar {
+  background-size: 128px 64px;
+  background-repeat: repeat-x;
+  background-image: linear-gradient(
+    -45deg,
+    $nav_color_foreground,
+    $nav_color_foreground 33%,
+    $nav_color_background 33%,
+    $nav_color_background 66%,
+    $nav_color_foreground 66%,
+    $nav_color_foreground
+  );
+}

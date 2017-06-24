@@ -1,0 +1,8 @@
+postgresql:
+  image: postgres:9.5
+  ports:
+    - 1432:5432
+  environment:
+    - PGDATA=/postgresql
+  volumes:
+    - ./tmp/data/postgresql:/postgresql

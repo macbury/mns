@@ -1,0 +1,86 @@
+.vault-manager {
+  position: absolute;
+  bottom: 0px;
+  top: 50px;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+
+  .editor-errors {
+    padding: 5px;
+    font-weight: bold;
+    color: #a94442;
+    background-color: #f2dede;
+    border-top: 2px solid #ebccd1;
+    border-bottom: 2px solid #ebccd1;
+    font-size: 18px;
+  }
+
+  .tabs {
+    display: flex;
+    flex-direction: row;
+    background: #222;
+    color: #fff;
+    .tab {
+      flex: 1;
+
+      input[type="text"] {
+        border: 0px;
+        color: black;
+        padding: 2px;
+      }
+    }
+
+    .add-button {
+      min-width: 50px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .tab, .add-button {
+      line-height: 36px;
+      padding: 0 10px;
+      cursor: default;
+      border-bottom: 4px solid #090909;
+      border-right: 1px solid #090909;
+
+      .icon {
+        margin-right: 5px;
+      }
+
+      .remove {
+        margin-left: 5px;
+        float: right;
+        margin-top: 11px;
+        cursor: pointer;
+      }
+
+      &:last-child {
+        border-right: 0px;
+      }
+
+      &:hover {
+        background: #2d2d2d;
+      }
+
+      &.active, &:active {
+        color: #fff;
+        background-color: #337ab7;
+        border-bottom: 1px solid #090909;
+      }
+    }
+  }
+
+  .ace_editor, .no-file-selected {
+    flex: 1;
+  }
+
+  .no-file-selected {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ccc;
+    padding-top: 50px;
+  }
+}

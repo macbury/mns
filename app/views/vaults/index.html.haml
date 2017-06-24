@@ -1,0 +1,20 @@
+.row
+  .col-md-8.col-sm-offset-2
+    .page-header
+      .pull-right= link_to t('.new'), new_vault_path, class: 'btn btn-md btn-success'
+      %h2 Vaults
+.row
+  .col-md-8.col-sm-offset-2
+    %table.table.table-striped.table-bordered.table-hover
+      %thead
+        %tr
+          %th= t('.name')
+          %th.col-md-3= t('.updated_at')
+      %tbody
+        - @vaults.each do |vault|
+          %tr
+            %td= link_to vault.name, vault
+            %td= l(vault.updated_at, format: :long)
+        - if @vaults.empty?
+          %tr
+            %td{ colspan: 2 }= t('.empty')

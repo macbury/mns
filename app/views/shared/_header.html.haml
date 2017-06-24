@@ -1,0 +1,13 @@
+%nav.navbar.navbar-inverse.navbar-fixed-top
+  .container-fluid
+    - if content_for?(:toolbar)
+      = content_for(:toolbar)
+    - else
+      .nav.navbar-left
+        %a.navbar-brand{ href: '/' }
+          %span.glyphicon.glyphicon-lock
+          = Settings.page.title
+    - if user_signed_in?
+      %ul.nav.navbar-nav.navbar-right
+        %li= link_to t('.vaults'), vaults_path
+        %li= link_to 'Log out', destroy_user_session_path, method: :delete

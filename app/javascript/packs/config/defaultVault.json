@@ -1,0 +1,4 @@
+[
+  { "name": "README", "content": "Hello this is your example vault.\nUse readme for additional data that you want to share with other people" },
+  { "name": "example.yml", "content": "information:\n\texample: 'You can have multiple files per vault with auto syntax detect based on file name!'" }
+]

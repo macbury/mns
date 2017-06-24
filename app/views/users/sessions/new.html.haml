@@ -1,0 +1,6 @@
+.row
+  .col-md-4.col-sm-offset-4
+    .page-header
+      %h2 Sign in
+    - User.omniauth_providers.each do |provider|
+      = link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(:user, provider), class: 'btn btn-block btn-default btn-lg'

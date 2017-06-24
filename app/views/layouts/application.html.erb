@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= Settings.page.title %></title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'application' %>
+    <%= javascript_pack_tag 'commons' %>
+    <%= content_for(:javascript) %>
+  </head>
+
+  <body>
+    <%= render 'shared/header' %>
+    <%= render 'shared/flash' %>
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
+  </body>
+</html>
